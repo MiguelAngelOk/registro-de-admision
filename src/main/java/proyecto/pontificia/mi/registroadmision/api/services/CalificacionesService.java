@@ -6,11 +6,11 @@ import proyecto.pontificia.mi.registroadmision.api.model.Calificaciones;
 import java.util.List;
 
 public interface CalificacionesService {
-    Calificaciones registrarCalificaciones(Calificaciones califaciones);
+     Calificaciones registrarCalificaciones(Calificaciones califaciones ) ;
 
-    List<Calificaciones> obtenerCalificaciones(Pageable pageable);
+    List<Calificaciones> obtenerCalificaciones(Pageable pageable ) ;
 
-    Calificaciones actualizarCalificaciones(Integer id, Calificaciones califaciones);
+    Calificaciones actualizarCalificaciones(Integer id, Calificaciones califaciones) ;
 
-    Calificaciones eliminarCalificaciones(Integer id);
+    Calificaciones eliminarCalificaciones(Integer id) ;
 }

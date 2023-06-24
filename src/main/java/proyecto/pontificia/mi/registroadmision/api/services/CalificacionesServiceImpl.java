@@ -24,20 +24,20 @@ public class CalificacionesServiceImpl implements CalificacionesService {
     private ExamenRepository examenRepository;
 
     @Override
-    public Calificaciones registrarCalificaciones(Calificaciones califaciones) {
-        try {
-            Calificaciones califacionNueva = new Calificaciones();
+    public Calificaciones registrarCalificaciones(Calificaciones califaciones)  {
+        try  {
+            Calificaciones califacionNueva = new Calificaciones() ;
 
-            califacionNueva.setNota(califaciones.getNota());
+             califacionNueva.setNota(califaciones.getNota()) ;
             Examen examen = examenRepository.findById(califaciones.getExamen().getId()).orElseThrow(() -> new RuntimeException("Examen no encontrado"));
-            califacionNueva.setExamen(examen);
+            califacionNueva.setExamen(examen) ;
 
             Usuario estudiante = usuarioRepository.findById(califaciones.getEstudiante().getId()).orElseThrow(() -> new RuntimeException("Estudiante no encontrado"));
-            califacionNueva.setEstudiante(estudiante);
+            califacionNueva.setEstudiante(estudiante) ;
 
-            return califacionesRepository.save(califacionNueva);
+            return califacionesRepository.save(califacionNueva );
         }catch (Exception e){
-            throw new EntityNotFoundException("Error calificacion", e);
+             throw new EntityNotFoundException("Error calificacion", e) ;
         }
     }
 
