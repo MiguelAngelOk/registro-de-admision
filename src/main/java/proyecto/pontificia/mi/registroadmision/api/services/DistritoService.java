@@ -12,5 +12,5 @@ public interface DistritoService {
 
     Distrito actualizarDistrito(Integer id, Distrito distrito);
 
-    Distrito eliminarDistrito(Integer id);
+    Distrito eliminarDistrito(Integer id) ;
 }

@@ -11,7 +11,7 @@ public class Distrito {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idDistrito")
     private Integer id;
-
+  s
     private String nombreDistrito;
     @ManyToOne
     @JoinColumn(name = "idProvincia")

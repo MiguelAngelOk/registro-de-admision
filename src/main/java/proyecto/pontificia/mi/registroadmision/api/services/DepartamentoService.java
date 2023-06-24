@@ -12,5 +12,5 @@ public interface DepartamentoService {
 
     Departamento actualizarDepartamento(Integer id, Departamento Departamento);
 
-    Departamento eliminarDepartamento(Integer id);
+    Departamento eliminarDepartamento(Integer id)  ;
 }
